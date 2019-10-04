@@ -7,7 +7,7 @@
 // @match        https://sportchek.ca/*
 // @match        https://www.sportchek.ca/shopping-cart.html*
 // @grant        GM_webRequest
-// //@webRequest   [{"selector":"*shopping-cart*","action":"cancel"}]
+// @webRequest   [{"selector":"*shopping-cart*","action":"cancel"}]
 
 // ==/UserScript==
 
