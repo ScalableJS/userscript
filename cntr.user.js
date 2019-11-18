@@ -29,7 +29,7 @@
     GM_registerMenuCommand("highlight modules", function () {
         $('[data-module-type]:visible').each(function () {
             const offset = $(this).offset();
-            const move = listSheets[offset.top.toString() + offset.left.toString()] = listSheets[offset.top.toString() + offset.left.toString()] || 0
+            const move = listSheets[offset.top.toString() + offset.left.toString()] = listSheets[offset.top.toString() + offset.left.toString()] || 0;
             
             const $node = $('<div class="mm-highlight" />').css({ 
                 top: offset.top + move, 
@@ -37,7 +37,7 @@
                 width: $(this).width(),
                 height: $(this).height()
             }).html($(this).data('module-type'));
-            $node.appendTo(document.body)
+            $node.appendTo(document.body);
             listSheets[offset.top.toString() + offset.left.toString()] += 10;
         });
     }, "h");
@@ -45,19 +45,19 @@
 
     SPC.trigger = (function (fn) {
         return function () {
-            console.log('trigger', this.constructor.name)
-            fn.apply(this, arguments)
+            console.log('trigger', this.constructor.name);
+            fn.apply(this, arguments);
         }
     }(SPC.trigger));
 
     SPC.subscribe = (function (fn) {
         return function () {
-            console.log('subscribe', this.constructor.name)
+            console.log('subscribe', this.constructor.name);
             fn.apply(this, arguments)
         }
     }(SPC.subscribe));
 
     GM_webRequest([{ "selector": "*shopping-cart*", "action": "cancel" }], function (info, message, details) {
-        alert()
+        alert();
     });
 })();
