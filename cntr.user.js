@@ -25,3 +25,4 @@
       };
     })(SPC.subscribe);
   })();
+  test
